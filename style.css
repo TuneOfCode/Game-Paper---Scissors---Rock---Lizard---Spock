@@ -1,0 +1,840 @@
+body{
+    background-color: #192444;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    width: 100%;
+    height: 100%;
+  }
+  .welcome{
+      text-transform: uppercase;
+      color: white;
+      text-align: center;
+      margin: 10% 0;
+      font-weight: 700;
+  }
+  .btn-triangle-pentagon{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 5% 50%;
+  }
+  .btn-triangle, .btn-pentagon{
+      margin: 20% 20px;
+      border: 1px solid white;
+      border-radius: 5px;
+      width: 200px;
+      padding: 2px 20px;
+      height: 50px;
+      font-size: 30px;
+      text-transform: uppercase;
+      font-weight: 700;
+      background-color: #192444;
+      color: white;
+  }
+  .again{
+      display: none;
+      justify-content: center;
+  }
+  .btn-back{
+    margin: 0% 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 100px;
+    padding: 2px 20px;
+    height: 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #192444;
+    color: white;
+  }
+  .btn-triangle:hover, .btn-pentagon:hover, .btn-back:hover{
+      background-color: #202b4b;
+      color: #9c1734;
+  }
+  .ft{
+      margin-top: 15%;
+  }
+  @media (max-width:575.98px){
+    .btn-triangle-pentagon{
+        display: block;
+        margin: 0 auto;
+    }
+    .btn-triangle, .btn-pentagon{
+        margin: 5% 25%;
+        border: 1px solid white;
+        border-radius: 5px;
+        width: 200px;
+        padding: 2px 20px;
+        height: 50px;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 700;
+        background-color: #192444;
+        color: white;
+    }
+  }
+
+  /* Paper - Scissors - Rock - Lizard - Spock */
+  .header{
+    margin: 50px auto;
+    border: 2px solid white;
+    width: 50%;
+    border-radius: 10px;
+  }
+  .logo{
+    margin: 10px 12%;
+  }
+  .result{
+    margin: 10px 12%;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: #1f3756;
+    background-color: white;
+    width: 150px;
+    text-transform: uppercase;
+    
+  }
+  #score{
+    font-weight: 700;
+  }
+  .numbers{
+    font-weight: 700;
+    font-size: 45px;
+    margin-top: -10px;
+  }
+
+  .content-pentagon{
+    background: url('https://cdn.glitch.com/259bc486-0699-468b-93dd-6f4db9a56f69%2Fbg-pentagon.svg?v=1628735380062') no-repeat;
+    height: 500px;
+    background-position: center;
+    margin-top: 20px;
+  }
+  .paper-pentagon, .spock-pentagon{
+    margin: -40px 43px;
+  }
+  .paper-picked-pentagon, .scissors-picked-pentagon, .rock-picked-pentagon, .lizard-picked-pentagon, .spock-picked-pentagon{
+    display: none;
+    margin: 40% -20%;
+  }
+  .house-paper-picked-pentagon, .house-scissors-picked-pentagon, .house-rock-picked-pentagon, .house-lizard-picked-pentagon, .house-spock-picked-pentagon{
+    margin: 40% 0%;
+    display: none;
+  }
+  .paper-pentagon img, .paper-picked-pentagon img, .house-paper-picked-pentagon img{
+    border: 20px solid #546ff4;
+    background-color: #dedede;
+    border-radius: 100px;
+    padding: 35px 35px;
+    cursor: pointer;
+    position:relative;
+    -webkit-box-shadow: 0 5px 1.5px #2747c0, 0px 5px 3px 0px #b3b5c6 inset;
+        box-shadow: 0 5px 1.5px #2747c0, 0px 5px 3px 0px #b3b5c6 inset;
+  }
+  .scissors-pentagon{
+    margin: 0 5%;
+  }
+  .scissors-pentagon img, .scissors-picked-pentagon img, .house-scissors-picked-pentagon img{
+    border: 20px solid #eba61e;
+    background-color: #dedede;
+    border-radius: 100px;
+    padding: 35px 35px;
+    cursor: pointer;
+    position:relative;
+    -webkit-box-shadow: 0 5px 1.5px #c76c1d, 0px 5px 3px 0px #b3b5c6 inset;
+        box-shadow: 0 5px 1.5px #c76c1d, 0px 5px 3px 0px #b3b5c6 inset;
+  }
+  .rock-pentagon, .lizard-pentagon{
+    margin: 8% 3%;
+  }
+  .rock-pentagon img, .rock-picked-pentagon img, .house-rock-picked-pentagon img{
+    border: 20px solid #df405e;
+    background-color: #dedede;
+    border-radius: 100px;
+    padding: 35px 35px;
+    cursor: pointer;
+    position:relative;
+    -webkit-box-shadow: 0 6px 1.5px #9c1734, 0px 5px 3px 0px #b3b5c6 inset;
+        box-shadow: 0 6px 1.5px #9c1734, 0px 5px 3px 0px #b3b5c6 inset;
+  }
+  .spock-pentagon img, .spock-picked-pentagon img, .house-spock-picked-pentagon img{
+        border: 20px solid #4dbccf;
+        background-color: #dedede;
+        border-radius: 100px;
+        padding: 35px 35px;
+        cursor: pointer;
+        position: relative;
+        -webkit-box-shadow: 0 6px 1.5px #197686, 0px 5px 3px 0px #b3b5c6 inset;
+        box-shadow: 0 6px 1.5px #197686, 0px 5px 3px 0px #b3b5c6 inset;
+    }
+
+    .lizard-pentagon img, .lizard-picked-pentagon img, .house-lizard-picked-pentagon img{
+        border: 20px solid #8a5be3;
+        background-color: #dedede;
+        border-radius: 100px;
+        padding: 35px 35px;
+        cursor: pointer;
+        position: relative;
+        -webkit-box-shadow: 0 6px 1.5px #5f3c9e, 0px 5px 3px 0px #b3b5c6 inset;
+        box-shadow: 0 6px 1.5px #5f3c9e, 0px 5px 3px 0px #b3b5c6 inset;
+    }
+  .paper-pentagon img:hover, .scissors-pentagon img:hover, .rock-pentagon img:hover, .spock-pentagon img:hover, .lizard-pentagon img:hover{
+  background-color: #dededed7;
+}
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+@keyframes reSize{
+  from{box-shadow: none;}
+  to{box-shadow: 0 0 0 20px  #2b3654, 0 0 0 60px  #233050, 0 0 0 100px  #202b4b;}
+}
+@keyframes bgColor{
+    from{background-color:#dedede;}
+    to{background-color:#dedede;}
+}
+.title-game-pentagon{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* margin: 50px 20px; */
+  margin: 125px 20%;
+}
+.you-picked-pentagon, .house-picked-pentagon{
+  margin: 0 10%;
+  font-weight: 700;
+  text-transform: uppercase;
+  
+}
+.title-game-pentagon h3{
+  color: white;
+  font-size: 19px;
+  font-weight: 700;
+}
+.picked-pentagon{
+  width: 150px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 40% 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.btn-replay-pentagon{
+  margin-top: 10%;
+  display: none;
+}
+.win-lose-pentagon{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+.play-pentagon{
+  border: none;
+  border-radius: 5px;
+  color: red;
+  width: 150px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10%;
+}
+.play-pentagon:hover{
+  background-color: rgba(240, 255, 255, 0.788);
+}
+.tilte-rules-pentagon{
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.modal-rules-pentagon{
+  margin: 0 15%;
+}
+.btn-rules-pentagon{
+  border: 1px solid white;
+  width: 150px;
+  background-color: #192444;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+}
+.btn-rules-pentagon:hover{
+  border: 1px solid white;
+}
+.footer{
+  margin-top: 50px;
+}
+.attribution {
+  font-size: 20px;
+  margin: 20px 0;
+  text-align: center;
+  color: white; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+
+  
+  
+/* ------------------------------------------------------------------------------------------------ */
+  
+  
+  
+  /* Paper - Scissors - Rock */
+  .header{
+    margin: 50px auto;
+    border: 2px solid white;
+    width: 50%;
+    border-radius: 10px;
+  }
+  .logo{
+    margin: 10px 12%;
+  }
+  .result{
+    margin: 10px 12%;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: #1f3756;
+    background-color: white;
+    width: 150px;
+    text-transform: uppercase;
+    
+  }
+  #score{
+    font-weight: 700;
+  }
+  .numbers{
+    font-weight: 700;
+    font-size: 45px;
+    margin-top: -10px;
+  }
+
+  .content{
+    background: url('https://cdn.glitch.com/259bc486-0699-468b-93dd-6f4db9a56f69%2Fbg-triangle.svg?v=1628681168985') no-repeat;
+    height: 500px;
+    background-position: center;
+    margin-top: 20px;
+    /* display: none; */
+  }
+
+  .paper{
+    margin: 0 5%;
+  }
+  .paper-picked, .scissors-picked, .rock-picked{
+    display: none;
+    margin: 40% -20%;
+  }
+  .house-paper-picked, .house-scissors-picked, .house-rock-picked{
+    margin: 40% 0%;
+    display: none;
+  }
+  .paper img, .paper-picked img, .house-paper-picked img{
+    border: 20px solid #546ff4;
+    background-color: #dedede;
+    border-radius: 100px;
+    padding: 50px 50px;
+    cursor: pointer;
+    position:relative;
+    -webkit-box-shadow: 0 5px 1.5px #2747c0, 0px 5px 3px 0px #b3b5c6 inset;
+        box-shadow: 0 5px 1.5px #2747c0, 0px 5px 3px 0px #b3b5c6 inset;
+  }
+  .scissors{
+    margin: 0 5%;
+  }
+  .scissors img, .scissors-picked img, .house-scissors-picked img{
+    border: 20px solid #eba61e;
+    background-color: #dedede;
+    border-radius: 100px;
+    padding: 50px 50px;
+    cursor: pointer;
+    position:relative;
+    -webkit-box-shadow: 0 5px 1.5px #c76c1d, 0px 5px 3px 0px #b3b5c6 inset;
+        box-shadow: 0 5px 1.5px #c76c1d, 0px 5px 3px 0px #b3b5c6 inset;
+  }
+  .rock{
+    margin: 0% 40%;
+  }
+  .rock img, .rock-picked img, .house-rock-picked img{
+    border: 20px solid #df405e;
+    background-color: #dedede;
+    border-radius: 100px;
+    padding: 50px 50px;
+    cursor: pointer;
+    position:relative;
+    -webkit-box-shadow: 0 6px 1.5px #9c1734, 0px 5px 3px 0px #b3b5c6 inset;
+        box-shadow: 0 6px 1.5px #9c1734, 0px 5px 3px 0px #b3b5c6 inset;
+  }
+  .spock img, .spock-picked img, .house-spock-picked img{
+        border: 20px solid #4dbccf;
+        background-color: #dedede;
+        border-radius: 100px;
+        padding: 50px 50px;
+        cursor: pointer;
+        position: relative;
+        -webkit-box-shadow: 0 6px 1.5px #197686, 0px 5px 3px 0px #b3b5c6 inset;
+        box-shadow: 0 6px 1.5px #197686, 0px 5px 3px 0px #b3b5c6 inset;
+    }
+
+    .lizard img, .lizard-picked img, .house-lizard-picked img{
+        border: 20px solid #8a5be3;
+        background-color: #dedede;
+        border-radius: 100px;
+        padding: 50px 50px;
+        cursor: pointer;
+        position: relative;
+        -webkit-box-shadow: 0 6px 1.5px #5f3c9e, 0px 5px 3px 0px #b3b5c6 inset;
+        box-shadow: 0 6px 1.5px #5f3c9e, 0px 5px 3px 0px #b3b5c6 inset;
+    }
+  .paper img:hover, .scissors img:hover, .rock img:hover, .spock img:hover, .lizard img:hover{
+  background-color: #dededed7;
+}
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+@keyframes reSize{
+  from{box-shadow: none;}
+  to{box-shadow: 0 0 0 20px  #2b3654, 0 0 0 60px  #233050, 0 0 0 100px  #202b4b;}
+}
+@keyframes bgColor{
+    from{background-color:#dedede;}
+    to{background-color:#dedede;}
+}
+.title-game{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* margin: 50px 20px; */
+  margin: 50px 20%;
+}
+.you-picked, .house-picked{
+  margin: 0 10%;
+  font-weight: 700;
+  text-transform: uppercase;
+  
+}
+.title-game h3{
+  color: white;
+  font-size: 19px;
+  font-weight: 700;
+}
+.picked{
+  width: 150px;
+  height: 200px;
+  background-color: #192444;
+  border-radius: 50%;
+  margin: 40% 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.btn-replay{
+  margin-top: 10%;
+  display: none;
+}
+.win-lose{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+.play{
+  border: none;
+  border-radius: 5px;
+  color: red;
+  width: 150px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10%;
+}
+.play:hover{
+  background-color: rgba(240, 255, 255, 0.788);
+}
+.tilte-rules{
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.modal-rules{
+  margin: 0 15%;
+}
+.btn-rules{
+  border: 1px solid white;
+  width: 150px;
+  background-color: #192444;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+}
+.btn-rules:hover{
+  border: 1px solid white;
+}
+.footer{
+  margin-top: 50px;
+}
+.attribution {
+  font-size: 20px;
+  margin: 20px 0;
+  text-align: center;
+  color: white; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+/* ----------------------------------------------------------------*/
+
+/* Responsive pentagon*/
+@media (max-width: 308px) {
+  .rock-pentagon, .lizard-pentagon {
+    margin: -12% -4%;
+  }
+}
+@media (max-width:575.98px)  {
+    .spock-picked-pentagon{
+      position: relative;
+      left: 65px;
+    }
+    .scissors-pentagon {
+        position: relative;
+        left: -30%;
+    }
+   .spock-pentagon{
+      position: relative;
+      left: -7%;
+    }
+    .paper-pentagon{
+      position: relative;
+      left: 55%;
+      top: -55%;
+    }
+    .rock-pentagon, .lizard-pentagon{
+      margin: -12% -2%;
+    }
+    .paper-pentagon img, .paper-picked-pentagon img, .house-paper-picked-pentagon img {
+        border: 20px solid #546ff4;
+        background-color: #dedede;
+        border-radius: 100px;
+        padding: 15px 15px;
+        cursor: pointer;
+        top: 5%;
+        position: relative;
+        -webkit-box-shadow: 0 5px 1.5px #2747c0, 0px 5px 3px 0px #b3b5c6 inset;
+        box-shadow: 0 5px 1.5px #2747c0, 0px 5px 3px 0px #b3b5c6 inset;
+    }
+    .scissors-pentagon img, .scissors-picked-pentagon img, .house-scissors-picked-pentagon img {
+        border: 20px solid #eba61e;
+        background-color: #dedede;
+        border-radius: 100px;
+        padding: 15px 15px;
+        cursor: pointer;
+        position: relative;
+        left: 60%;
+        -webkit-box-shadow: 0 5px 1.5px #c76c1d, 0px 5px 3px 0px #b3b5c6 inset;
+        box-shadow: 0 5px 1.5px #c76c1d, 0px 5px 3px 0px #b3b5c6 inset;
+    }
+    .rock-pentagon img, .rock-picked-pentagon img, .house-rock-picked-pentagon img {
+        border: 20px solid #df405e;
+        background-color: #dedede;
+        border-radius: 100px;
+        padding: 15px 15px;
+        cursor: pointer;
+        position: relative;
+        -webkit-box-shadow: 0 6px 1.5px #9c1734, 0px 5px 3px 0px #b3b5c6 inset;
+        box-shadow: 0 6px 1.5px #9c1734, 0px 5px 3px 0px #b3b5c6 inset;
+    }
+     .spock-pentagon img, .spock-picked-pentagon img, .house-spock-picked-pentagon img{
+          border: 20px solid #4dbccf;
+          background-color: #dedede;
+          border-radius: 100px;
+          padding: 15px 15px;
+          cursor: pointer;
+          position: relative;
+          -webkit-box-shadow: 0 6px 1.5px #197686, 0px 5px 3px 0px #b3b5c6 inset;
+          box-shadow: 0 6px 1.5px #197686, 0px 5px 3px 0px #b3b5c6 inset;
+     }
+  
+     .lizard-pentagon img, .lizard-picked-pentagon img, .house-lizard-picked-pentagon img{
+      border: 20px solid #8a5be3;
+      background-color: #dedede;
+      border-radius: 100px;
+      padding: 10px 10px;
+      cursor: pointer;
+      position: relative;
+      -webkit-box-shadow: 0 6px 1.5px #5f3c9e, 0px 5px 3px 0px #b3b5c6 inset;
+      box-shadow: 0 6px 1.5px #5f3c9e, 0px 5px 3px 0px #b3b5c6 inset;
+     }
+  
+  
+    .title-game-pentagon h3 {
+        color: white;
+        font-size: 12px;
+        font-weight: 700;
+        margin-left: 5%;
+    }
+    .paper-picked-pentagon, .rock-picked-pentagon {
+        display: none;
+        margin: 40% 20%;
+    }
+    .scissors-picked-pentagon{
+      display: block;
+      position: relative;
+      left: -50%;
+    }
+    .you-pentagon{
+      margin: 0 -50px;
+      position: relative;
+      left: 70px;
+    }
+    .house-pentagon{
+      position: relative;
+      right: 70px;
+      margin: 0 29px;
+    }
+    .house-scissors-picked-pentagon img{
+      position: relative;
+      left: 12px;
+    }
+    .picked-pentagon {
+      width: 150px;
+      background-color: '';
+      border-radius: 50%;
+      margin: 5% 0px;
+      position: relative;
+      right: 60px;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+    }
+    
+    .you-picked-pentagon, .house-picked-pentagon {
+      margin: 0 15%;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  @media (max-width: 767.98px) {
+      .spock-picked-pentagon{
+        position: relative;
+        left: -15px;
+      }
+      .btn-replay-pentagon{
+        margin: 275px auto;
+      }
+      .title-game-pentagon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        /* margin: 50px 20px; */
+        margin: 50px 60%;
+      }
+      .btn-rules-pentagon {
+        border: 1px solid white;
+        width: 150px;
+        background-color: #192444;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 20px;
+        margin: 20% auto;
+      }
+  }
+  /* @media (min-width: 992px){
+    .rock-pentagon, .lizard-pentagon {
+        margin: 8% 10%;
+    }
+  } */
+
+
+/* ----------------------------------------------------------------*/
+
+
+/* Responsive triangle*/
+
+@media (max-width:575.98px)  {
+
+  .paper, .scissors {
+      margin: 0px -45%;
+  }
+  .paper img, .paper-picked img, .house-paper-picked img {
+      border: 20px solid #546ff4;
+      background-color: #dedede;
+      border-radius: 100px;
+      padding: 30px 30px;
+      cursor: pointer;
+      top: 5%;
+      position: relative;
+      -webkit-box-shadow: 0 5px 1.5px #2747c0, 0px 5px 3px 0px #b3b5c6 inset;
+      box-shadow: 0 5px 1.5px #2747c0, 0px 5px 3px 0px #b3b5c6 inset;
+  }
+  .scissors img, .scissors-picked img, .house-scissors-picked img {
+      border: 20px solid #eba61e;
+      background-color: #dedede;
+      border-radius: 100px;
+      padding: 30px 30px;
+      cursor: pointer;
+      position: relative;
+      left: 60%;
+      -webkit-box-shadow: 0 5px 1.5px #c76c1d, 0px 5px 3px 0px #b3b5c6 inset;
+      box-shadow: 0 5px 1.5px #c76c1d, 0px 5px 3px 0px #b3b5c6 inset;
+  }
+  .rock img, .rock-picked img, .house-rock-picked img {
+      border: 20px solid #df405e;
+      background-color: #dedede;
+      border-radius: 100px;
+      padding: 30px 30px;
+      cursor: pointer;
+      position: relative;
+      -webkit-box-shadow: 0 6px 1.5px #9c1734, 0px 5px 3px 0px #b3b5c6 inset;
+      box-shadow: 0 6px 1.5px #9c1734, 0px 5px 3px 0px #b3b5c6 inset;
+  }
+   .spock img, .spock-picked img, .house-spock-picked img{
+        border: 20px solid #4dbccf;
+        background-color: #dedede;
+        border-radius: 100px;
+        padding: 30px 30px;
+        cursor: pointer;
+        position: relative;
+        -webkit-box-shadow: 0 6px 1.5px #197686, 0px 5px 3px 0px #b3b5c6 inset;
+        box-shadow: 0 6px 1.5px #197686, 0px 5px 3px 0px #b3b5c6 inset;
+   }
+
+   .lizard img, .lizard-picked img, .house-lizard-picked img{
+    border: 20px solid #8a5be3;
+    background-color: #dedede;
+    border-radius: 100px;
+    padding: 30px 30px;
+    cursor: pointer;
+    position: relative;
+    -webkit-box-shadow: 0 6px 1.5px #5f3c9e, 0px 5px 3px 0px #b3b5c6 inset;
+    box-shadow: 0 6px 1.5px #5f3c9e, 0px 5px 3px 0px #b3b5c6 inset;
+   }
+
+
+  .title-game h3 {
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      margin-left: 5%;
+  }
+  .paper-picked, .rock-picked {
+      display: none;
+      margin: 40% 20%;
+  }
+  .scissors-picked{
+    display: block;
+    position: relative;
+    left: -50%;
+  }
+  .you{
+    margin-left: 20px;
+    position: relative;
+    left: 70px;
+  }
+  .house{
+    position: relative;
+    right: 70px;
+  }
+  .house-scissors-picked img{
+    position: relative;
+    left: 12px;
+  }
+  .picked {
+    width: 150px;
+    /* height: 200px; */
+    background-color: '';
+    border-radius: 50%;
+    margin: 5% 0px;
+    position: relative;
+    right: 60px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    background-color: #192444;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+  }
+  
+  .you-picked, .house-picked {
+    margin: 0 15%;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+@media (max-width: 767.98px) {
+    .btn-replay{
+      margin: 275px auto;
+    }
+    .title-game {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      /* margin: 50px 20px; */
+      margin: 50px 55%;
+    }
+    .btn-rules {
+      border: 1px solid white;
+      width: 150px;
+      background-color: #192444;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 20px;
+      margin: 0px auto;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+}
